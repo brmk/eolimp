@@ -1,0 +1,18 @@
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    long long x1,y1,z1,x2,y2,z2;
+    cin>>x1>>y1>>z1>>x2>>y2>>z2;
+    long long sec;
+    sec = (x2-x1)*60*60 + (y2 -y1)*60 + z2-z1;
+    x1 = sec/3600;
+    sec = sec%3600;
+    y1 = sec/60;
+    sec = sec%60;
+    z1 = sec;
+    cout<<x1<<" "<<y1<<" "<<z1<<endl;
+
+    return 0;
+}

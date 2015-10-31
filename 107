@@ -1,0 +1,49 @@
+
+#include <iostream>
+using namespace std;
+long long getAmount(long long sum){
+    long long amount = 0;
+    amount = sum/100*100;
+    sum%=100;
+    amount+=(sum/30)*20;
+    sum%=30;
+    amount+=sum/2;
+    return amount;
+}
+int main(){
+    long long x,y,sum=0;
+    cin>>x;
+    long long startingX=x;
+    if(x>=100){
+        y = x/100;
+        x%=100;
+        sum+=100*y;
+        if(getAmount(sum)>startingX){
+            cout<<sum<<endl;
+            return 0;
+        }
+    }
+    if(x>=20){
+        y = x/20;
+        x%=20;
+        if(30*y>100){
+            sum+=100;
+            if(getAmount(sum)>startingX){
+                cout<<sum<<endl;
+                return 0;
+            }
+        }
+        else sum+=30*y;
+        if(getAmount(sum)>startingX){
+            cout<<sum<<endl;
+            return 0;
+        }
+    }
+    if(x>0){
+        if(x*2>100) sum+=100;
+        else if(x*2>30) sum+=30;
+        else sum+=x*2;
+    }
+    cout<<sum<<endl;
+    return 0;
+}

@@ -1,0 +1,17 @@
+#include <iostream>
+#include <math.h>
+#include <iomanip>
+using namespace std;
+int main()
+{
+	double s,r1, k,pi=3.14;
+	cin>>s>>r1;
+	if(r1==0){  cout<<fixed<<setprecision(2)<<0.00<<endl; return 0; }
+	k=M_PI*r1*r1;
+	k=k-s;
+	if (k<=0){
+	  cout<<fixed<<setprecision(2)<<0.00<<endl; return 0;}
+	cout<<fixed<<setprecision(2)<<sqrt(k/M_PI)<<endl;
+	return 0;
+}
+

@@ -1,0 +1,14 @@
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    long long x;
+    cin>>x;
+    if(x>9){cout<<"High"<<endl; return 0;}
+    if(x>6){cout<<"Sufficient"<<endl; return 0;}
+    if(x>3){cout<<"Average"<<endl; return 0;}
+    cout<<"Initial"<<endl;
+    
+    return 0;
+}
